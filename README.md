@@ -1,6 +1,8 @@
 # JSF Demo
 
-In this project I'd like to give out an example JSF2 application which Richfaces included.
+This is a project for the document I've written on JBoss Wiki page:
+
+[Developing JSF Project Using JBoss AS7, Maven and IntelliJ](https://docs.jboss.org/author/display/AS71/Developing+JSF+Project+Using+JBoss+AS7%2C+Maven+and+IntelliJ)
 
 I've used the following command to generate this project:
 
