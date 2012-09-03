@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Welcome Page</title>
+</h:head>
+<h:body>
+    <!--<h:outputScript name="jsf.js" library="javax.faces" target="body"/>-->
+
+    <h1>Welcome Demo</h1>
+    <h:form>
+        <h:inputText id="name" value="#{helloPB.name}">
+            <!--<f:ajax render="helloTextOutput"/>-->
+        </h:inputText>
+
+        <h:commandButton value="Say Hi via Ajax">
+            <f:ajax execute="name" render="helloTextOutput"/>
+        </h:commandButton>
+        <h:outputText id="helloTextOutput" value="#{helloPB.hello}"/>
+    </h:form>
+
+</h:body>
+</html>
+
+
+
+

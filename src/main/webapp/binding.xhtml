@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Binding Page</title>
+</h:head>
+<h:body>
+    <h1>Binding Demo</h1>
+    <h:form>
+        <h:inputText id="name" binding="#{bindBean.name}" />
+
+        <h:commandButton value="Say Hi via Ajax">
+            <f:ajax execute="name" render="helloTextOutput"/>
+        </h:commandButton>
+        <h:outputText id="helloTextOutput" value="#{bindBean.hello}"/>
+    </h:form>
+
+</h:body>
+</html>
+
+
+
+

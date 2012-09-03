@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<!--<f:loadBundle basename="net.bluedash.jsf.messages.messages" var="msgs"/>-->
+<h:head>
+    <title>Message Page</title>
+</h:head>
+<h:body>
+
+
+    <h:form>
+        <h:commandLink action="#{localeChanger.germanAction}">
+            <h2>German</h2>
+        </h:commandLink>
+        <h:commandLink action="#{localeChanger.englishAction}">
+            <h2>English</h2>
+        </h:commandLink>
+    </h:form>
+    <hr/>
+
+    <h1>Message Demo</h1>
+    #{msgs.answer}
+    <p/>
+
+    <h:outputFormat value="#{msgs.currentScore}">
+        <f:param value="100"/>
+    </h:outputFormat>
+
+    <p/>
+    #{msgs.hello}
+
+</h:body>
+</html>
+
+
+
+

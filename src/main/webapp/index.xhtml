@@ -1,5 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html">
 
@@ -10,6 +11,7 @@
     <h:outputScript name="jsf.js" library="javax.faces" target="body"/>
 
     <h1>JSF 2 Demo</h1>
+
     <h:form>
         <h:inputText id="name" value="#{helloPB.name}">
             <f:ajax render="helloTextOutput"/>
@@ -32,6 +34,18 @@
         <h:outputText value="#{timeBean.now}" id="out"/>
     </h:form>
 
+    <!--Alternative Expression-->
+    <h2>#{timeBean["now"]}</h2>
+
+    #{stockQuote.getQuote(1.1)}
+
+    <!--Try to use JSf built-in functions-->
+    <p/>
+    #{fn:split("me:you:they", ":")[1]}
+
+    <!--Predefined Objects-->
+    <p/>
+    #{header['User-Agent']}
 </h:body>
 </html>
 
